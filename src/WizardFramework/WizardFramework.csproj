@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
     <AssemblyName>Divelements.WizardFramework</AssemblyName>
-    <DefineConstants>$(DefineConstants);NET20;EVALUATION</DefineConstants>
+    <DefineConstants>$(DefineConstants);NET20</DefineConstants>
     <RootNamespace>Divelements.WizardFramework</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <Product>Wizard Framework for Windows Forms</Product>
