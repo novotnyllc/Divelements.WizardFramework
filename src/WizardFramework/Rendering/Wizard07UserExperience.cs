@@ -258,11 +258,8 @@ namespace Divelements.WizardFramework.Rendering
 				//if (OwnerFormSubclass.IsCompositionEnabled)
 				//{
 					Color textColor = (Wizard.OwnerForm != null && Wizard.OwnerForm.WindowState == FormWindowState.Maximized) ? Color.White : SystemColors.ActiveCaptionText;
-#if NET20
+
 					using (Font font = SystemFonts.CaptionFont)
-#else
-				                    using (Font font = new Font(context.ControlFont, FontStyle.Regular))
-#endif
 					{
 						if (OwnerFormSubclass.IsCompositionEnabled)
 							DrawingMethods.DrawThemeText(context.Graphics, bounds, Wizard.OwnerForm.Text, font, textColor, Wizard.OwnerForm.WindowState != FormWindowState.Maximized);

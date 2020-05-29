@@ -25,12 +25,9 @@ namespace Divelements.WizardFramework
 
 			this.wizard = wizard;
 
-			// Set .NET 2.0 specific properties
-#if NET20
 			listView1.TileSize = new System.Drawing.Size(335, 34);
 			listView1.View = View.Tile;
 			listView1.UseCompatibleStateImageBehavior = false;
-#endif
 
 			Initialize();
 		}

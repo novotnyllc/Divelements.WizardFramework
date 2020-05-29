@@ -199,11 +199,8 @@ namespace Divelements.WizardFramework.Rendering
 			Win32.SelectObject(memoryHdc, fontHandle);
 
 			// Draw glowing text
-#if NET20
 			System.Windows.Forms.VisualStyles.VisualStyleRenderer renderer = new System.Windows.Forms.VisualStyles.VisualStyleRenderer(System.Windows.Forms.VisualStyles.VisualStyleElement.Window.Caption.Active);
-#else
-			IntPtr theme = Win32.OpenThemeData(IntPtr.Zero, "WINDOW");
-#endif
+
 			Win32.DTTOPTS dttOpts = new Win32.DTTOPTS();
 			dttOpts.dwSize = Marshal.SizeOf(typeof(Win32.DTTOPTS));
 			dttOpts.dwFlags = DTT_COMPOSITED;
@@ -213,11 +210,8 @@ namespace Divelements.WizardFramework.Rendering
 				dttOpts.dwFlags |= DTT_GLOWSIZE;
 			dttOpts.crText = ColorTranslator.ToWin32(color);
 			dttOpts.iGlowSize = 8;
-#if NET20
+
 			Win32.DrawThemeTextEx(renderer.Handle, memoryHdc, 0, 0, text, -1, 2084, ref r, ref dttOpts); //(int)(TextFormatFlags.SingleLine | TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.NoPrefix)
-#else
-			Win32.DrawThemeTextEx(theme, memoryHdc, 0, 0, text, -1, 2084, ref r, ref dttOpts); //(int)(TextFormatFlags.SingleLine | TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter | TextFormatFlags.NoPrefix)
-#endif
 
 			// Copy to foreground
 			Win32.BitBlt(primaryHdc, bounds.Left, bounds.Top, bounds.Width, bounds.Height, memoryHdc, 0, 0, 0x00CC0020);
@@ -226,9 +220,6 @@ namespace Divelements.WizardFramework.Rendering
 			Win32.DeleteObject(fontHandle);
 			Win32.DeleteObject(dib);
 			Win32.DeleteDC(memoryHdc);
-#if !NET20
-			Win32.CloseThemeData(theme);
-#endif
 
 			graphics.ReleaseHdc(primaryHdc);
 		}

@@ -9,12 +9,10 @@ namespace Divelements.WizardFramework.Rendering
 	/// </summary>
 	public struct TextFormattingInformation : IDisposable
 	{
-#if NET20
 		/// <summary>
 		/// Flags that control how text is drawn.
 		/// </summary>
 		public TextFormatFlags TextFormatFlags;
-#endif
 		/// <summary>
 		/// An object that controls how text is drawn.
 		/// </summary>
@@ -32,7 +30,6 @@ namespace Divelements.WizardFramework.Rendering
 		{
 			TextFormattingInformation textInfo = new TextFormattingInformation();
 
-#if NET20
 			// Create GDI text formatting information
 			TextFormatFlags flags = TextFormatFlags.EndEllipsis | TextFormatFlags.PreserveGraphicsClipping | TextFormatFlags.PreserveGraphicsTranslateTransform | TextFormatFlags.NoPadding;
 			if (rtl)
@@ -74,7 +71,6 @@ namespace Divelements.WizardFramework.Rendering
 			if (!showMnemonics)
 				flags |= TextFormatFlags.HidePrefix;
 			textInfo.TextFormatFlags = flags;
-#endif
 
 			// Create GDI+ text formatting information
 			StringFormat format = new StringFormat(StringFormat.GenericTypographic);

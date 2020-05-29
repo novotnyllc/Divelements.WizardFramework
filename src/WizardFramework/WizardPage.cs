@@ -70,9 +70,7 @@ namespace Divelements.WizardFramework
 		/// The text that informs the user how to proceed to the next page.
 		/// </summary>
 		[Category("Appearance"), DefaultValue(""), Description("The text that informs the user how to proceed to the next page."), Localizable(true)]
-#if NET20
 		[Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]
-#endif
 		public virtual string ProceedText
 		{
 			get { return proceedText; }
@@ -91,9 +89,7 @@ namespace Divelements.WizardFramework
 		/// The text that is shown at the top of the page as an introduction to the page.
 		/// </summary>
 		[Category("Appearance"), DefaultValue(""), Description("The text that is shown at the top of the page as an introduction to the page.")]
-#if NET20
 		[Editor("System.ComponentModel.Design.MultilineStringEditor, System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(System.Drawing.Design.UITypeEditor))]
-#endif
 		public string IntroductionText
 		{
 			get { return introductionText; }

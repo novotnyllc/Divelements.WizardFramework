@@ -34,12 +34,11 @@ namespace Divelements.WizardFramework.Rendering
 				return;
 			}
 
-#if NET20
 			if (!useGdiPlus)
 				//OptimizedRendering.DrawText(graphics, text, font, bounds, textFormat.TextFormatFlags, foreColor);
 				TextRenderer.DrawText(graphics, text, font, bounds, foreColor, textFormat.TextFormatFlags);
 			else
-#endif
+
 			using (SolidBrush brush = new SolidBrush(foreColor))
 				graphics.DrawString(text, font, brush, bounds, textFormat.StringFormat);
 		}
@@ -63,13 +62,11 @@ namespace Divelements.WizardFramework.Rendering
 				return;
 			}
 
-#if NET20
 			if (!useGdiPlus)
 				//OptimizedRendering.DrawText(graphics, text, font, bounds, textFormat.TextFormatFlags, foreColor);
 				TextRenderer.DrawText(graphics, text, font, bounds, foreColor, textFormat.TextFormatFlags);
 			else
-#endif
-			graphics.DrawString(text, font, brush, bounds, textFormat.StringFormat);
+				graphics.DrawString(text, font, brush, bounds, textFormat.StringFormat);
 		}
 
 		/// <summary>
@@ -82,12 +79,10 @@ namespace Divelements.WizardFramework.Rendering
 		/// <returns>The size of the text.</returns>
 		public static Size MeasureText(Graphics graphics, string text, Font font, TextFormattingInformation textFormat)
 		{
-#if NET20
 			if (!useGdiPlus)
 				return TextRenderer.MeasureText(graphics, text, font, new Size(int.MaxValue, int.MaxValue), textFormat.TextFormatFlags);
 			else
-#endif
-			return Size.Ceiling(graphics.MeasureString(text, font, int.MaxValue, textFormat.StringFormat));
+				return Size.Ceiling(graphics.MeasureString(text, font, int.MaxValue, textFormat.StringFormat));
 		}
 
 		/// <summary>
@@ -101,11 +96,9 @@ namespace Divelements.WizardFramework.Rendering
 		/// <returns>The size of the text.</returns>
 		public static Size MeasureText(Graphics graphics, string text, Font font, int width, TextFormattingInformation textFormat)
 		{
-#if NET20
 			if (!useGdiPlus)
 				return TextRenderer.MeasureText(graphics, text, font, new Size(width, int.MaxValue), textFormat.TextFormatFlags);
 			else
-#endif
 				return Size.Ceiling(graphics.MeasureString(text, font, width, textFormat.StringFormat));
 		}
 	}

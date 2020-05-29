@@ -4,10 +4,9 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Windows.Forms.Design;
-#if NET20
 using System.Windows.Forms.Design.Behavior;
 using System.Collections;
-#endif
+
 
 namespace Divelements.WizardFramework
 {
@@ -51,7 +50,6 @@ namespace Divelements.WizardFramework
 			base.Dispose(disposing);
 		}
 
-#if NET20
 		public override System.Collections.IList SnapLines
 		{
 			get
@@ -66,7 +64,6 @@ namespace Divelements.WizardFramework
 				return snapLines;
 			}
 		}
-#endif
 
 		public override SelectionRules SelectionRules
 		{

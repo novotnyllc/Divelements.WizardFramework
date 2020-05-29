@@ -40,22 +40,6 @@ namespace Divelements.WizardFramework
 			Invalidate();
 		}
 
-#if !NET20
-		/// <summary>
-		/// A second paragraph of text to display.
-		/// </summary>
-		[Category("Appearance"), DefaultValue(""), Description("A second paragraph of text to display."), Localizable(true)]
-		public string Text2
-		{
-			get { return text2; }
-			set
-			{
-				text2 = value;
-				Invalidate();
-			}
-		}
-#endif
-
 		/// <summary>
 		/// Indicates the type of icon to show next to the information box.
 		/// </summary>
@@ -134,10 +118,7 @@ namespace Divelements.WizardFramework
 				bounds.X += SystemInformation.IconSize.Width + Wizard97Metrics.GetScaledPixelSize(8);
 			bounds.Width -= SystemInformation.IconSize.Width + Wizard97Metrics.GetScaledPixelSize(8);
 			string text = Text;
-#if !NET20
-			if (Text2.Length != 0)
-				text += Environment.NewLine + Environment.NewLine + Text2;
-#endif
+
 			using (TextFormattingInformation textFormat = TextFormattingInformation.CreateFormattingInformation(RightToLeft == RightToLeft.Yes, true, StringAlignment.Near, StringAlignment.Near, false))
 				IndependentText.DrawText(e.Graphics, text, Font, bounds, textFormat, ForeColor);
 		}
@@ -153,7 +134,6 @@ namespace Divelements.WizardFramework
 			}
 		}
 
-#if NET20
 		/// <summary>
 		/// Overridden.
 		/// </summary>
@@ -163,7 +143,5 @@ namespace Divelements.WizardFramework
 			get { return base.Text; }
 			set { base.Text = value; }
 		}
-#endif
-
 	}
 }
