@@ -8,6 +8,9 @@
 
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)key.snk</AssemblyOriginatorKeyFile>
+    <PackageProjectUrl>https://github.com/novotnyllc/Divelements.WizardFramework</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright (c) Divelements Limited and Contributors</Copyright>
   </PropertyGroup>
   
 
