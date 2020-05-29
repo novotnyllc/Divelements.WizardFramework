@@ -3,7 +3,8 @@
   <PropertyGroup>
     <Authors>Claire Novotny</Authors>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>    
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>    
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
   
 
