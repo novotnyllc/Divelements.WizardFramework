@@ -57,7 +57,9 @@ namespace Divelements.WizardFramework
 			// Set drawing styles
 			SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer | ControlStyles.ResizeRedraw, true);
 			SetStyle(ControlStyles.Selectable | ControlStyles.ContainerControl, false);
-			SetStyle(ControlStyles.FixedWidth | ControlStyles.FixedHeight, true);
+
+			// This interferes wtih proper scaling for HiDPI
+			//SetStyle(ControlStyles.FixedWidth | ControlStyles.FixedHeight, true);
 		}
 
 		internal void SetActualVisibility(bool visible)

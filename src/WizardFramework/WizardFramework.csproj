@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net472</TargetFrameworks>
     <AssemblyName>Divelements.WizardFramework</AssemblyName>
     <RootNamespace>Divelements.WizardFramework</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
