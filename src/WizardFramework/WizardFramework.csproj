@@ -4,11 +4,8 @@
     <AssemblyName>Divelements.WizardFramework</AssemblyName>
     <DefineConstants>$(DefineConstants);NET20;EVALUATION</DefineConstants>
     <RootNamespace>Divelements.WizardFramework</RootNamespace>
-
     <UseWindowsForms>true</UseWindowsForms>
-
     <Product>Wizard Framework for Windows Forms</Product>
-    <Version>1.2.0</Version>
     <GenerateDocumentationFile Condition="'$(Configuration)' == 'Release'">true</GenerateDocumentationFile>
   </PropertyGroup>
 
