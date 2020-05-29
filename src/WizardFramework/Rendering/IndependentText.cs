@@ -12,9 +12,9 @@ namespace Divelements.WizardFramework.Rendering
 		internal static bool useGdiPlus = false;
 
 		// Vista Glass
-		internal static Rectangle glassTextBounds;
-		internal static Graphics glassGraphics;
-		internal static bool glassUseGlow;
+		//internal static Rectangle glassTextBounds;
+		//internal static Graphics glassGraphics;
+		//internal static bool glassUseGlow;
 
 		/// <summary>
 		/// Draws a block of text.
@@ -28,11 +28,11 @@ namespace Divelements.WizardFramework.Rendering
 		public static void DrawText(Graphics graphics, string text, Font font, Rectangle bounds, TextFormattingInformation textFormat, Color foreColor)
 		{
 			// Use glass if necessary
-			if (glassGraphics == graphics && glassTextBounds.IntersectsWith(bounds))
-			{
-				DrawingMethods.DrawThemeText(graphics, bounds, text, font, foreColor, glassUseGlow);
-				return;
-			}
+			//if (glassGraphics == graphics && glassTextBounds.IntersectsWith(bounds))
+			//{
+			//	DrawingMethods.DrawThemeText(graphics, bounds, text, font, foreColor, glassUseGlow);
+			//	return;
+			//}
 
 			if (!useGdiPlus)
 				//OptimizedRendering.DrawText(graphics, text, font, bounds, textFormat.TextFormatFlags, foreColor);
@@ -56,11 +56,11 @@ namespace Divelements.WizardFramework.Rendering
 		public static void DrawText(Graphics graphics, string text, Font font, Rectangle bounds, TextFormattingInformation textFormat, Color foreColor, Brush brush)
 		{
 			// Use glass if necessary
-			if (glassGraphics == graphics && glassTextBounds.IntersectsWith(bounds))
-			{
-				DrawingMethods.DrawThemeText(graphics, bounds, text, font, foreColor, glassUseGlow);
-				return;
-			}
+			//if (glassGraphics == graphics && glassTextBounds.IntersectsWith(bounds))
+			//{
+			//	DrawingMethods.DrawThemeText(graphics, bounds, text, font, foreColor, glassUseGlow);
+			//	return;
+			//}
 
 			if (!useGdiPlus)
 				//OptimizedRendering.DrawText(graphics, text, font, bounds, textFormat.TextFormatFlags, foreColor);

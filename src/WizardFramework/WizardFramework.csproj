@@ -6,6 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Product>Wizard Framework for Windows Forms</Product>
     <GenerateDocumentationFile Condition="'$(Configuration)' == 'Release'">true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS0618;CS0672</NoWarn>
   </PropertyGroup>
 
 
