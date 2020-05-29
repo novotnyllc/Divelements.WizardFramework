@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net472</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;net461</TargetFrameworks>
     <AssemblyName>Divelements.WizardFramework</AssemblyName>
     <RootNamespace>Divelements.WizardFramework</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
@@ -11,7 +11,7 @@
 
 
   <ItemGroup>
-    <Reference Condition="'$(TargetFramework)' == 'net472'" Include="System.Design" />
+    <Reference Condition="'$(TargetFramework)' == 'net461'" Include="System.Design" />
   </ItemGroup>
 
   <ItemGroup>

@@ -5,8 +5,6 @@ Tim Dawson has generously relicensed this control under an MIT license and [Clai
 
 There's unlikely to be significant development on this library, however bug fix PRs are always welcome.
 
-Current plans are to multi-target to .NET Framework and .NET Core, then get a package up on NuGet.
+The current code supports .NET 4.6.1 and .NET Core 3.1.
 
-
-
-
+![NuGet](https://img.shields.io/nuget/v/Divelements.WizardFramework)
