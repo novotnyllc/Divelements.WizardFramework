@@ -1,18 +1,10 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
+    <TargetFramework>net40</TargetFramework>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{332A93BA-CFEC-4055-A0EA-95772C0ACCBD}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>
-    </ApplicationIcon>
-    <AssemblyKeyContainerName>
-    </AssemblyKeyContainerName>
+    <AssemblyKeyContainerName></AssemblyKeyContainerName>
     <AssemblyName>Divelements.WizardFramework</AssemblyName>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
@@ -20,146 +12,83 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Divelements.WizardFramework</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>
-    </StartupObject>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
+    <StartupObject></StartupObject>
     <OldToolsVersion>3.5</OldToolsVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile>
-    </ConfigurationOverrideFile>
+    <ConfigurationOverrideFile></ConfigurationOverrideFile>
     <DefineConstants>TRACE;DEBUG;NET20;EVALUATION</DefineConstants>
     <DocumentationFile>Divelements.WizardFramework.xml</DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
-    <NoWarn>
-    </NoWarn>
-    <Optimize>false</Optimize>
+    <NoWarn></NoWarn>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile>
-    </ConfigurationOverrideFile>
-    <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>
-    </DocumentationFile>
-    <DebugSymbols>false</DebugSymbols>
+    <ConfigurationOverrideFile></ConfigurationOverrideFile>
+    <DocumentationFile></DocumentationFile>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
-    <NoWarn>
-    </NoWarn>
-    <Optimize>true</Optimize>
+    <NoWarn></NoWarn>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
-    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
+    <Reference Update="System">
       <Name>System</Name>
     </Reference>
-    <Reference Include="System.Data">
+    <Reference Update="System.Data">
       <Name>System.Data</Name>
     </Reference>
     <Reference Include="System.Design">
       <Name>System.Design</Name>
     </Reference>
-    <Reference Include="System.Drawing">
+    <Reference Update="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
-    <Reference Include="System.Xml">
+    <Reference Update="System.Xml">
       <Name>System.XML</Name>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Design\WizardDesigner.cs" />
-    <Compile Include="OwnerFormSubclass.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Enumerations.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="EventArgs.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="FinishPage.cs">
+    <Compile Update="FinishPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="frmChoosePage.cs">
+    <Compile Update="frmChoosePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Properties\ProductInfo.cs" />
-    <Compile Include="Rendering\Aero07ColorTable.cs" />
-    <Compile Include="Rendering\CustomButton.cs">
+    <Compile Update="Rendering\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Rendering\DrawingMethods.cs" />
-    <Compile Include="Rendering\IndependentText.cs" />
-    <Compile Include="InformationBox.cs">
+    <Compile Update="InformationBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Design\InformationBoxDesigner.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IntroductionPage.cs">
+    <Compile Update="IntroductionPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Rendering\RenderingContext.cs" />
-    <Compile Include="Rendering\System07ColorTable.cs">
-    </Compile>
-    <Compile Include="Rendering\TextFormattingInformation.cs" />
-    <Compile Include="CoverWizardPage.cs">
+    <Compile Update="CoverWizardPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Rendering\VisualStyles.cs" />
-    <Compile Include="Rendering\Wizard07ColorTable.cs" />
-    <Compile Include="Rendering\Wizard07UserExperience.cs">
-    </Compile>
-    <Compile Include="Rendering\Wizard97UserExperience.cs">
-    </Compile>
-    <Compile Include="Rendering\WizardUserExperience.cs" />
-    <Compile Include="Win32.cs" />
-    <Compile Include="Wizard.cs">
+    <Compile Update="Wizard.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Wizard97Metrics.cs" />
-    <Compile Include="WizardAeroMetrics.cs" />
-    <Compile Include="WizardPage.cs">
+    <Compile Update="WizardPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WizardPageBase.cs">
+    <Compile Update="WizardPageBase.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Design\WizardPageBaseDesigner.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Design\WizardPageDesigner.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="frmChoosePage.resx">
+    <EmbeddedResource Update="frmChoosePage.resx">
       <DependentUpon>frmChoosePage.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -169,11 +98,5 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\backbutton.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
+  <PropertyGroup />
 </Project>
