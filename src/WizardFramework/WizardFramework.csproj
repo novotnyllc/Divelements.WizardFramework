@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFramework>net40</TargetFramework>
+    <TargetFrameworks>net472;netcoreapp3.1</TargetFrameworks>
     <AssemblyName>Divelements.WizardFramework</AssemblyName>
     <DefineConstants>$(DefineConstants);NET20;EVALUATION</DefineConstants>
     <RootNamespace>Divelements.WizardFramework</RootNamespace>
@@ -14,7 +14,7 @@
 
 
   <ItemGroup>
-    <Reference Include="System.Design" />
+    <Reference Condition="'$(TargetFramework)' == 'net472'" Include="System.Design" />
   </ItemGroup>
 
   <ItemGroup>
