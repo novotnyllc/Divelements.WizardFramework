@@ -10,7 +10,7 @@ namespace Divelements.WizardFramework.Rendering
 	public class Wizard07UserExperience : WizardUserExperience
 	{
 		// Statics
-		private Image previousButtonImage = Image.FromStream(typeof(Wizard07UserExperience).Assembly.GetManifestResourceStream("Divelements.WizardFramework.Resources.backbutton.png"));
+		private Image previousButtonImage = Resources.BackButton;
 
 		// Members
 		private OwnerFormSubclass subclass;
