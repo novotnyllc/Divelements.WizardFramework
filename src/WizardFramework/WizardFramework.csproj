@@ -7,11 +7,13 @@
     <Product>Wizard Framework for Windows Forms</Product>
     <GenerateDocumentationFile Condition="'$(Configuration)' == 'Release'">true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS0618;CS0672</NoWarn>
+    <GenerateResourceUsePreserializedResources Condition="'$(TargetFramework)' == 'net461'">true</GenerateResourceUsePreserializedResources>    
   </PropertyGroup>
 
 
-  <ItemGroup>
-    <Reference Condition="'$(TargetFramework)' == 'net461'" Include="System.Design" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <Reference Include="System.Design" />
+    <PackageReference Include="System.Resources.Extensions" Version="4.7.1" />
   </ItemGroup>
 
   <ItemGroup>
