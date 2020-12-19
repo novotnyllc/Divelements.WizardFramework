@@ -20,8 +20,7 @@ stages:
     steps:
     - task: UseDotNet@2
       inputs:
-        version: 5.0.x
-        includePreviewVersions: true
+        version: 5.x
         
     - task: DotNetCoreCLI@2  
       inputs:
