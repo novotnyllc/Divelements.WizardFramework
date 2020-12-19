@@ -257,6 +257,8 @@ namespace Divelements.WizardFramework.Rendering
 				bounds.Width -= WizardAeroMetrics.TitleBarSeparatorSize * 2;
 				//if (OwnerFormSubclass.IsCompositionEnabled)
 				//{
+				if(Wizard.OwnerForm != null)
+                {
 					Color textColor = (Wizard.OwnerForm != null && Wizard.OwnerForm.WindowState == FormWindowState.Maximized) ? Color.White : SystemColors.ActiveCaptionText;
 
 					using (Font font = SystemFonts.CaptionFont)
@@ -269,6 +271,8 @@ namespace Divelements.WizardFramework.Rendering
 								IndependentText.DrawText(context.Graphics, Wizard.OwnerForm.Text, font, bounds, textFormat, textColor);
 						}
 					}
+				}					
+					
 				//}
 				//else
 				//{
